@@ -1,10 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "Rubix Cube Scramble Generator",
+  "name": "Cubix — Rubik’s Cube Timer & Scrambler",
   "version": "1.0.0",
-  "description": "Get scrambles for your 3x3 rubix cuve",
+  "description": "Track your Rubik’s Cube solving progress with Cubix! Get a random scramble every time you start solving, and easily time yourself right in your browser. Cubix shows your 5 most recent solve times, your personal best, and your average time to help you improve your speed and skills. Perfect for cubers of all levels who want a simple, fast, and reliable timer with scramble generation — no extra downloads needed!",
   "icons": {
-    "48": "icons/icon-48.png",
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-16.png",
+    "48": "icons/icon-16.png",
     "128": "icons/icon-48.png"
   },
   "action": {
