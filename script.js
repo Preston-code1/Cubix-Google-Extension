@@ -55,6 +55,17 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+document.addEventListener('mousedown', (e) => {
+    if (!isRunning && !holdTimeout) {
+        e.preventDefault();
+        holdTimeout = setTimeout(() => {
+        isReady = true;
+        timeText.style.color = 'Lime';
+        timeText.textContent = "0.00"
+    }, 500);
+    }
+});
+
 //start timer when key up
 document.addEventListener('keyup', (e) => {
     if (e.code === 'Space') {
@@ -72,6 +83,23 @@ document.addEventListener('keyup', (e) => {
     isReady = false;
     timeText.style.color = '';
   }
+});
+
+document.addEventListener('mouseup', (e) => {
+    e.preventDefault();
+
+    clearTimeout(holdTimeout);
+    holdTimeout = null;
+
+    if (isReady && !isRunning) {
+        startTimer();
+    } else if (isRunning) {
+        stopTimer();
+    }
+
+    
+    isReady = false;
+    timeText.style.color = '';
 });
 
 function startTimer() {
